@@ -1,0 +1,1137 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://calsci-io.github.io/calsci_sdk_docs/SDK_Overview/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Getting_Started/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>SDK Overview - CalSci SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sdk-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CalSci SDK" class="md-header__button md-logo" aria-label="CalSci SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CalSci SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SDK Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CalSci SDK" class="md-nav__button md-logo" aria-label="CalSci SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CalSci SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CalSci SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-calsci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) What is CalSci?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) What is the SDK?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-who-this-sdk-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Who this SDK is for
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-core-runtime-model-high-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Core runtime model (high-level)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sdk-design-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) SDK design goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-main-sdk-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Main SDK building blocks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6) Main SDK building blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-object-handler-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Object handler exports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Buffers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-uploaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Uploaders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-navigation-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Navigation state
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-app-categories-youll-see-in-the-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) App categories you’ll see in the repo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-documentation-map-what-to-read-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Documentation map (what to read next)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-best-practices-from-day-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Best practices from day one
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10) Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting_Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core_App_APIs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core App APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UI_Buffer_System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI Buffer System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../App_Development_Patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Development Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Platform_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API_Reference_and_Recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference and Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-calsci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) What is CalSci?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) What is the SDK?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-who-this-sdk-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Who this SDK is for
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-core-runtime-model-high-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Core runtime model (high-level)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sdk-design-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) SDK design goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-main-sdk-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Main SDK building blocks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6) Main SDK building blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-object-handler-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Object handler exports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Buffers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-uploaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Uploaders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-navigation-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Navigation state
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-app-categories-youll-see-in-the-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) App categories you’ll see in the repo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-documentation-map-what-to-read-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Documentation map (what to read next)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-best-practices-from-day-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Best practices from day one
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10) Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sdk-overview">SDK Overview</h1>
+<p>Welcome to the CalSci Software Development Kit (SDK) documentation.</p>
+<p>This chapter gives you the mental model needed to build apps on CalSci confidently before moving into implementation chapters.</p>
+<hr />
+<h2 id="1-what-is-calsci">1) What is CalSci?</h2>
+<p>CalSci is a MicroPython-based runtime for a programmable scientific calculator platform (ESP32-S3 + keypad + LCD).<br />
+It provides a structured app system with:</p>
+<ul>
+<li>A launcher/runtime loop</li>
+<li>Shared global runtime objects</li>
+<li>UI buffers for menu/form/text experiences</li>
+<li>Display uploaders that render buffers to the LCD</li>
+<li>App routing and navigation state handling</li>
+</ul>
+<p>In short: CalSci gives you a lightweight app framework tailored for constrained embedded hardware.</p>
+<hr />
+<h2 id="2-what-is-the-sdk">2) What is the SDK?</h2>
+<p>In this documentation, “SDK” means the <strong>developer-facing APIs and patterns</strong> already available in the CalSci codebase for creating apps.</p>
+<p>The SDK primarily consists of:</p>
+<ul>
+<li>Shared objects exported through <code>data_modules.object_handler</code></li>
+<li>Buffer modules in <code>process_modules/*buffer*.py</code></li>
+<li>Input and typing flow (<code>typer</code>, keypad mapping)</li>
+<li>App navigation/routing (<code>App</code>, launcher, navbar states)</li>
+<li>Data/config patterns (<code>db/*.json</code>)</li>
+<li>Optional platform services (networking, app download/install)</li>
+</ul>
+<hr />
+<h2 id="3-who-this-sdk-is-for">3) Who this SDK is for</h2>
+<p>This SDK is written for:</p>
+<ul>
+<li>Developers building new calculator apps</li>
+<li>Contributors maintaining built-in apps</li>
+<li>Makers integrating sensors or device features into UI apps</li>
+</ul>
+<p>You should be comfortable with:</p>
+<ul>
+<li>Python / MicroPython basics</li>
+<li>Event-loop style programming</li>
+<li>Basic embedded constraints (memory, latency, and display limits)</li>
+</ul>
+<hr />
+<h2 id="4-core-runtime-model-high-level">4) Core runtime model (high-level)</h2>
+<p>CalSci apps typically follow this loop:</p>
+<ol>
+<li><strong>Read input</strong> (<code>typer.start_typing()</code> / keypad)</li>
+<li><strong>Update buffer state</strong> (<code>menu</code>, <code>form</code>, or <code>text</code>)</li>
+<li><strong>Render frame</strong> with corresponding uploader (<code>menu_refresh</code>, <code>form_refresh</code>, <code>text_refresh</code>)</li>
+<li><strong>Route/exit</strong> by updating <code>app</code> object when navigation changes app context</li>
+</ol>
+<p>This consistent model is what makes different apps feel uniform on-device.</p>
+<hr />
+<h2 id="5-sdk-design-goals">5) SDK design goals</h2>
+<p>The CalSci SDK is built around a few practical goals:</p>
+<ul>
+<li><strong>Consistency</strong>: all apps use similar loop and render patterns</li>
+<li><strong>Simplicity</strong>: shared objects reduce app boilerplate</li>
+<li><strong>Low-resource operation</strong>: buffer + uploader split keeps rendering focused</li>
+<li><strong>Modularity</strong>: app groups and app names allow dynamic loading</li>
+<li><strong>Extensibility</strong>: new app modules can be integrated with minimal runtime changes</li>
+</ul>
+<hr />
+<h2 id="6-main-sdk-building-blocks">6) Main SDK building blocks</h2>
+<h3 id="61-object-handler-exports">6.1 Object handler exports</h3>
+<p><code>data_modules.object_handler</code> wires and exposes commonly used globals, such as:</p>
+<ul>
+<li><code>menu</code>, <code>form</code>, <code>text</code></li>
+<li><code>menu_refresh</code>, <code>form_refresh</code>, <code>text_refresh</code></li>
+<li><code>typer</code></li>
+<li><code>nav</code></li>
+<li><code>app</code></li>
+</ul>
+<p>This is the practical “import surface” for most apps.</p>
+<h3 id="62-buffers">6.2 Buffers</h3>
+<p>Buffers store UI state:</p>
+<ul>
+<li><strong>Menu buffer</strong>: list navigation + cursor/viewport</li>
+<li><strong>Form buffer</strong>: label/input editing flows</li>
+<li><strong>Text buffer</strong>: text/cursor editing and command handling</li>
+</ul>
+<h3 id="63-uploaders">6.3 Uploaders</h3>
+<p>Uploaders convert buffer state into actual LCD writes.<br />
+Apps do not generally render pixels directly; they update buffers and call the appropriate uploader.</p>
+<h3 id="64-navigation-state">6.4 Navigation state</h3>
+<p>Navbar state (<code>default</code>, <code>alpha</code>, <code>beta</code>, <code>ALPHA</code>) reflects keypad mode and is passed into refresh calls for consistent UI feedback.</p>
+<h3 id="65-routing">6.5 Routing</h3>
+<p>The <code>App</code> object holds current/next app context used by runtime app loading logic.</p>
+<hr />
+<h2 id="7-app-categories-youll-see-in-the-repo">7) App categories you’ll see in the repo</h2>
+<p>The app tree is organized into groups such as:</p>
+<ul>
+<li><code>apps/root</code> (entry and core menus)</li>
+<li><code>apps/scientific_calculator</code> (math tools, matrix ops, equations)</li>
+<li><code>apps/settings</code> (device/runtime settings)</li>
+<li><code>apps/installed_apps</code> (downloaded or add-on apps)</li>
+</ul>
+<p>The same SDK pattern is reused across these groups.</p>
+<hr />
+<h2 id="8-documentation-map-what-to-read-next">8) Documentation map (what to read next)</h2>
+<p>After this overview, continue in this order:</p>
+<ol>
+<li>
+<p><strong>Runtime Architecture</strong><br />
+   Understand lifecycle, launcher flow, and dynamic app loading.</p>
+</li>
+<li>
+<p><strong>Getting Started</strong><br />
+   Set up environment and build your first app.</p>
+</li>
+<li>
+<p><strong>Core App APIs</strong><br />
+   Learn object exports, input handling, and navigation/routing.</p>
+</li>
+<li>
+<p><strong>UI Buffer System</strong><br />
+   Master menu/form/text buffers and uploaders.</p>
+</li>
+<li>
+<p><strong>App Development Patterns + Recipes</strong><br />
+   Build production-style apps faster.</p>
+</li>
+</ol>
+<hr />
+<h2 id="9-best-practices-from-day-one">9) Best practices from day one</h2>
+<ul>
+<li>Prefer SDK shared objects over ad-hoc globals.</li>
+<li>Keep app loops deterministic (input → update → render).</li>
+<li>Use the correct buffer for the UX type (menu vs form vs text).</li>
+<li>Keep display refresh focused; avoid unnecessary redraws.</li>
+<li>Validate form/text input before calling compute logic.</li>
+<li>Keep JSON-backed data schemas stable and documented.</li>
+</ul>
+<hr />
+<h2 id="10-summary">10) Summary</h2>
+<p>CalSci SDK is a practical embedded app framework built around a consistent loop, shared runtime objects, and buffer-driven UI rendering.</p>
+<p>If you understand the model in this chapter, the rest of the SDK docs become implementation detail.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: CalSci SDK">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                CalSci SDK
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Getting_Started/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting Started">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
